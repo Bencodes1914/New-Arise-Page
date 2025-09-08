@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arise UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="cta-content">
+      <h2>Start Your Project</h2>
+      <p>Contact us today to start crafting your exceptional and customized website solution.</p>
+      <div class="cta-features">
+        <span>✔ Customized design</span>
+        <span>✔ Ongoing support</span>
+        <span>✔ Fast delivery</span>
+      </div>
+      <a href="#" class="cta-btn">Start a Project</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Left -->
+      <div class="footer-left">
+        <h3 class="logo">Arise<span class="ui">UI</span></h3>
+        <p>Book a Call For Free Consultation</p>
+        <p class="desc">Experienced team delivering exceptional digital solutions tailored to your brand.</p>
+        <a href="#" class="contact-btn">Contact Us</a>
+
+        <div class="socials">
+          <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+          <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-links">
+        <div>
+          <h4>Home</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pricings</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Works <span class="new">New</span></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Other</h4>
+          <ul>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Timeline</a></li>
+            <li><a href="#">Waitlist</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ's</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="copyright">©2025, All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
