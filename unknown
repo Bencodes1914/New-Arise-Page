@@ -1,81 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arise UI</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Project - Rise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 80px 20px 120px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f0f 100%);
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #4a90e2, #7b68ee);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #7b68ee, #4a90e2);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+
+        .feature-item::before {
+            content: '✓';
+            color: #4ade80;
+            font-weight: bold;
+            width: 16px;
+            height: 16px;
+            background: rgba(74, 222, 128, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(15, 15, 15, 0.9);
+            padding: 60px 20px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #4a90e2;
+        }
+
+        .footer-section ul li a.highlight {
+            color: #4a90e2;
+        }
+
+        .brand-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .brand-tagline {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .brand-description {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-button {
+            background: transparent;
+            border: 1px solid #4a90e2;
+            color: #4a90e2;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .contact-button:hover {
+            background: #4a90e2;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #4a90e2;
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .features-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-section {
+                padding: 60px 20px 80px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <!-- CTA Section -->
-  <section class="cta">
-    <div class="cta-content">
-      <h2>Start Your Project</h2>
-      <p>Contact us today to start crafting your exceptional and customized website solution.</p>
-      <div class="cta-features">
-        <span>✔ Customized design</span>
-        <span>✔ Ongoing support</span>
-        <span>✔ Fast delivery</span>
-      </div>
-      <a href="#" class="cta-btn">Start a Project</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-
-      <!-- Left -->
-      <div class="footer-left">
-        <h3 class="logo">Arise<span class="ui">UI</span></h3>
-        <p>Book a Call For Free Consultation</p>
-        <p class="desc">Experienced team delivering exceptional digital solutions tailored to your brand.</p>
-        <a href="#" class="contact-btn">Contact Us</a>
-
-        <div class="socials">
-          <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
-          <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
-          <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Start Your Project</h1>
+            <p class="hero-subtitle">
+                Contact us today to start crafting your exceptional and customized<br>
+                website solution.
+            </p>
+            
+            <div class="features-list">
+                <div class="feature-item">Customized design</div>
+                <div class="feature-item">Ongoing support</div>
+                <div class="feature-item">Fast delivery</div>
+            </div>
+            
+            <a href="#contact" class="cta-button">Start a Project</a>
         </div>
-      </div>
+    </section>
 
-      <!-- Links -->
-      <div class="footer-links">
-        <div>
-          <h4>Home</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Pricings</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">Works <span class="new">New</span></a></li>
-          </ul>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section brand-section">
+                <div class="brand-logo">🚀rise°</div>
+                <div class="brand-tagline">Book a Call For Free Consultation</div>
+                <div class="brand-description">
+                    Experienced team delivering exceptional digital<br>
+                    solutions tailored to your brand.
+                </div>
+                <a href="#contact" class="contact-button">Contact Us →</a>
+                
+                <div class="social-section">
+                    <div style="color: #b0b0b0; font-size: 0.9rem; margin-bottom: 0.5rem;">Our Social Handles</div>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Home</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#package">Package</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#works" class="highlight">Works ★ New</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Other</h3>
+                <ul>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#waitlist">Waitlist</a></li>
+                    <li><a href="#privacy">Privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#faq">FAQ's</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div>
-          <h4>Other</h4>
-          <ul>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Timeline</a></li>
-            <li><a href="#">Waitlist</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
+        <div class="footer-bottom">
+            @2023, All Rights Reserved
         </div>
-
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQ's</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <p class="copyright">©2025, All Rights Reserved</p>
-  </footer>
-
+    </footer>
 </body>
 </html>
