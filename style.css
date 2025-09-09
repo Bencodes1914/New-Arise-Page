@@ -204,7 +204,8 @@ button{
 .help-section-head {
   display: flex;
   align-items: center;    
-  gap: 1rem;      
+  gap: 1rem;    
+  margin-bottom: 20px;  
 }
 
 .help-section-head hr {
@@ -334,7 +335,7 @@ button{
 .why-us > h4{
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #a1a1aa;
+    color: #ffffff;;
 }
 
 .why-us-tag{
@@ -421,7 +422,7 @@ button{
 }
 
 .process > h4{
-  color: #a1a1aa;
+  color: #ffffff;;
 }
 
 .about-grid {
@@ -451,7 +452,7 @@ button{
 }
 
 div > p {
-  color: #a1a1aa;
+  color: #ffffff;;
 }
 
 .section-title {
@@ -568,7 +569,7 @@ a > img{
 }
 
 .tools-h4{
-  color: #a1a1aa;
+  color: #ffffff;;
 }
 
 .tools-used{
@@ -663,7 +664,7 @@ a > img{
  .works > p{
    margin-top: 20px;
    margin-bottom: 20px;
-   color: #a1a1aa;
+   color: #ffffff;;
  }
 
  .works-card{
@@ -743,7 +744,7 @@ a > img{
  }
 
  .industry-insight > p{
-  color: #a1a1aa;
+  color: #ffffff;;
  }
 
  .industry-tag{
@@ -779,7 +780,7 @@ a > img{
 
  .comparison > p{
   padding-bottom: 50px;
-  color: #a1a1aa;
+  color: #ffffff;;
  }
 
  .comparison-tag {
@@ -854,7 +855,7 @@ a > img{
  }
 
  .services-tag {
-     color: #a1a1aa;
+     color: #ffffff;;
      font-size: 14px;
      margin-bottom: 20px;
      border: 1px solid rgba(255, 255, 255, 0.2);
@@ -868,7 +869,7 @@ a > img{
  }
 
  .services > p {
-     color: #a1a1aa;
+     color: #ffffff;;
      margin-bottom: 60px;
      max-width: 600px;
      margin-left: auto;
@@ -906,7 +907,7 @@ a > img{
  }
 
  .service-card p {
-     color: #a1a1aa;
+     color: #ffffff;;
      margin-bottom: 30px;
      line-height: 1.6;
  }
@@ -924,7 +925,7 @@ a > img{
  }
 
  .other-services h3 {
-     color: #a1a1aa;
+     color: #ffffff;;
      font-size: 1.2rem;
      margin-bottom: 30px;
  }
@@ -988,7 +989,7 @@ a > img{
 
   .plan-badge {
      font-size: 16px;
-     color: #a1a1aa;
+     color: #ffffff;;
      margin-bottom: 15px;
  }
 
@@ -1062,7 +1063,7 @@ a > img{
  .pricing-features li {
      margin-bottom: 10px;
      font-size: 14px;
-     color: #a1a1aa;
+     color: #ffffff;;
  }
 
   .trial-package {
@@ -1170,7 +1171,7 @@ a > img{
  }
 
  .feature-card p {
-     color: #a1a1aa;
+     color: #ffffff;;
      line-height: 1.6;
  }
 
@@ -1250,7 +1251,7 @@ a > img{
  }
 
  .stat-label {
-     color: #a1a1aa;
+     color: #ffffff;;
      font-size: 14px;
  }
 
@@ -1360,7 +1361,7 @@ a > img{
  }
 
  .blog-date {
-     color: #a1a1aa;
+     color: #ffffff;;
      font-size: 12px;
  }
 
@@ -1407,7 +1408,7 @@ a > img{
  }
 
  .testimonials > p {
-     color: #a1a1aa;
+     color: #ffffff;;
      margin-bottom: 60px;
      margin-left: auto;
      margin-right: auto;
@@ -1490,7 +1491,7 @@ a > img{
  }
 
 .client-title {
-    color: #a1a1aa;
+    color: #ffffff;;
     font-size: 14px;
  }
 
