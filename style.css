@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: cursive;
     color: white;
-    background-color: rgb(58, 54, 54);
+    background-color: #7d7d7d;
 }
 
 header{
@@ -679,7 +679,7 @@ a > img{
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  width: 500px;
+  width: 570px;
   height: fit-content;
  }
 
